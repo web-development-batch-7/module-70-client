@@ -6,13 +6,13 @@ const Login = () => {
     const { signIn } = useContext(AuthContext)
 
 
-    const handleLogIn = () => {
+    const handleLogIn = (event) => {
         event.preventDefault()
         const form = event.target
         const email = form.email.value
         const password = form.password.value
 
-        const signUpUser = { email, password }
+        const signInUser = { email, password }
         // console.log(signUpUser);
 
         signIn(email, password)
